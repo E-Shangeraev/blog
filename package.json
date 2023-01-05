@@ -2,7 +2,11 @@
   "name": "blog",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve frontend-client",
+    "build": "nx build frontend-client",
+    "test": "nx test frontend-client"
+  },
   "private": true,
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
