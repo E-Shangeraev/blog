@@ -6,10 +6,13 @@
     "start": "nx run-many --target=serve",
     "build": "nx run-many --target=build",
     "test": "nx run-many --target=test",
+    "lint": "nx run-many --target=lint",
     "migrate": "nx migrate latest",
     "frontend-client:start": "nx serve frontend-client",
     "frontend-client:build": "nx build frontend-client",
-    "frontend-client:test": "nx test frontend-client"
+    "frontend-client:test": "nx test frontend-client",
+    "frontend-client:lint": "nx lint frontend-client",
+    "prepare": "husky install"
   },
   "private": true,
   "devDependencies": {
@@ -42,8 +45,10 @@
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "^8.0.3",
     "jest": "28.1.1",
     "jest-environment-jsdom": "28.1.1",
+    "lint-staged": "^13.1.0",
     "nx": "15.4.4",
     "prettier": "^2.6.2",
     "react-refresh": "^0.10.0",
@@ -54,10 +59,16 @@
     "url-loader": "^4.1.1"
   },
   "dependencies": {
+    "@mui/material": "^5.11.3",
+    "@mui/styled-engine-sc": "^5.11.0",
+    "@reduxjs/toolkit": "^1.9.1",
     "core-js": "^3.6.5",
+    "i18next": "^22.4.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-i18next": "^12.1.1",
     "react-is": "18.2.0",
+    "react-router-dom": "^6.6.1",
     "regenerator-runtime": "0.13.7",
     "styled-components": "5.3.6",
     "tslib": "^2.3.0"
