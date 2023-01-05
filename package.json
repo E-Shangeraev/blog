@@ -3,9 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve frontend-client",
-    "build": "nx build frontend-client",
-    "test": "nx test frontend-client"
+    "start": "nx run-many --target=serve",
+    "build": "nx run-many --target=build",
+    "test": "nx run-many --target=test",
+    "migrate": "nx migrate latest",
+    "frontend-client:start": "nx serve frontend-client",
+    "frontend-client:build": "nx build frontend-client",
+    "frontend-client:test": "nx test frontend-client"
   },
   "private": true,
   "devDependencies": {
