@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@blog/frontend/entities": ["libs/frontend/entities/src/index.ts"],
+      "@blog/frontend/features": ["libs/frontend/features/src/index.ts"],
+      "@blog/frontend/pages": ["libs/frontend/pages/src/index.ts"],
+      "@blog/frontend/processes": ["libs/frontend/processes/src/index.ts"],
+      "@blog/frontend/shared": ["libs/frontend/shared/src/index.ts"],
+      "@blog/frontend/widgets": ["libs/frontend/widgets/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
