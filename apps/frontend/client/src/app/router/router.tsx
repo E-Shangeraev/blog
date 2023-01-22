@@ -1,10 +1,13 @@
 import { Suspense } from 'react';
 import {
+  Route,
   createBrowserRouter,
   createRoutesFromElements,
-  Route,
 } from 'react-router-dom';
-import { privateRoutes, publicRoutes } from './routes';
+import { publicRoutes } from './routes';
+import { ui } from '@blog/frontend/shared';
+
+const { Layout } = ui;
 
 export function buildRouter() {
   const unprotectedRoutes = publicRoutes.map(
@@ -25,7 +28,15 @@ export function buildRouter() {
 
   return createBrowserRouter(
     createRoutesFromElements([
-      <Route element={<div>Layout</div>}>{unprotectedRoutes}</Route>,
+      <Route
+        element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <Layout />
+          </Suspense>
+        }
+      >
+        {unprotectedRoutes}
+      </Route>,
     ])
   );
 }
